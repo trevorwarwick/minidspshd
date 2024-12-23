@@ -1,0 +1,28 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        },
+        "data_description": {
+          "host": "Hostname or IP address of your MiniDSP media player.",
+          "port": "Port number (default 3000)."
+        }
+      },
+      "discovery_confirm": {
+        "description": "Do you want to add MiniDSP (`{name}`) to Home Assistant?",
+        "title": "Discovered MiniDSP"
+      }
+    },
+    "error": {
+      "cannot_connect": "cannot connect",
+      "unknown": "unknown error"
+    },
+    "abort": {
+      "already_configured": "device already configured",
+      "cannot_connect": "Cannot connect to discovered MiniDSP"
+    }
+  }
+}
