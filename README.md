@@ -17,16 +17,13 @@ this setting is write-only.
 
 The integration currently needs to be manually installed into the custom_components directory of your 
 Home Assistant installation.  I will be attempting to get it installable via HACS in due course. In 
-the meantime, you will need to have SSH access to your Home Assistant system, and manually execute 
-the following commands, or some equivalent:
+the meantime, you will need to have SSH access to your Home Assistant system. Use wget or curl to
+download the latest release from github, and unpack the tar or zip file. The actual files you need
+for the integration are in the custom_components/minidspshd directory in the archive, and this is also 
+where they need to end up on your system when you've unpacked the release. For example:
 
 ```
-~ # cd /root/config
-config # mkdir custom_components  # if not already existing
-config # wget https://github.com/trevorwarwick/minidspshd/archive/refs/heads/main.zip
-config # cd custom_components
-custom_components # unzip ../main.zip
-custom_components # mv minidspshd-main minidsdp
+~ # cd /root/config/custom_components
 custom_components # ls -l minidspshd
 total 48
 -rw-r--r--    1 root     root          1347 Dec 19 15:28 __init__.py
