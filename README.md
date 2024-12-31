@@ -15,12 +15,23 @@ would probably be more confusing than useful.
 Note that there is no way to read the currently selected DSP preset from the API, so
 this setting is write-only.
 
-The integration currently needs to be manually installed into the custom_components directory of your 
-Home Assistant installation.  I will be attempting to get it installable via HACS in due course. In 
-the meantime, you will need to have SSH access to your Home Assistant system. Use wget or curl to
-download the latest release from github, and unpack the tar or zip file. The actual files you need
-for the integration are in the custom_components/minidspshd directory in the archive, and this is also 
-where they need to end up on your system when you've unpacked the release. For example:
+The integration needs to be installed into the custom_components directory of your 
+Home Assistant installation.  You can do this via the Home Assistant Community Store (HACS).
+See:  https://www.hacs.xyz/docs/use/download/download/ . An advantage of using HACS over
+manual installation is that HACS will automatically tell you whenever an update for the integration is available.
+
+Once you have HACS installed, follow the instructions for adding a Custom Repository here: 
+https://www.hacs.xyz/docs/faq/custom_repositories/ . Specify "trevorwarwick/minidspshd" as the Repo
+and "Integration" as the type.  This will add the integration to the allowed list of downloads
+within HACS. Then search within HACS for "minidspshd", and select Download from the three-dot menu. 
+It will tell you which version it's downloading. Then restart Home Assistant, and the integration
+will find your SHD assuming it's powered up.
+
+Alternatively, to install manually without HACS, you will need to have SSH access to your Home Assistant system. 
+Use wget or curl to download the latest release from https://github.com/trevorwarwick/minidspshd/releases, 
+and unpack the tar or zip file. The actual files you need for the integration are in the custom_components/minidspshd 
+directory in the archive, and this is also  where they need to end up on your system when you've unpacked the release. 
+For example:
 
 ```
 ~ # cd /root/config/custom_components
