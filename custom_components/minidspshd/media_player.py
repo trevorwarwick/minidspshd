@@ -121,7 +121,7 @@ class Volumio(MediaPlayerEntity):
     _attr_supported_features = FEATURES_AS_VOLUMIO
     _attr_source_list = []
     _attr_sound_mode_list = []
-    _attr_volume_step = 0.03
+    _attr_volume_step = 0.02
 
     def __init__(self, volumio, uid, name, info) -> None:
         """Initialize the media player."""
